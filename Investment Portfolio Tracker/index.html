@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Portfolio Tracker</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>Investment Portfolio Tracker</h1>
+
+    <form id="investmentForm">
+        <input type="text" id="assetName" placeholder="Asset Name" required />
+        <input type="number" id="investedAmount" placeholder="Invested Amount" required />
+        <input type="number" id="currentValue" placeholder="Current Value" required />
+        <button type="submit">Add Investment</button>
+    </form>
+
+    <h2>Investment Portfolio</h2>
+
+    <table id="investmentTable">
+        <thead>
+            <tr>
+                <th>Asset Name</th>
+                <th>Investment Amount</th>
+                <th>Current Value</th>
+                <th>Percentage Change</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="investmentList"></tbody>
+    </table>
+
+    <div id="totalValue">Total Value: $0.00</div>
+
+    <form id="updateForm" style="display: none;">
+        <h3>Update Investment</h3>
+        <input type="text" id="updateAssetName" placeholder="Asset Name" required />
+        <input type="number" id="updateInvestedAmount" placeholder="Invested Amount" required />
+        <input type="number" id="updateCurrentValue" placeholder="Current Value" required />
+        <button type="submit">Update Investment</button>
+        <button type="button" onclick="cancelUpdate()">Cancel</button>
+    </form>
+
+    
+    <h2>Investment Distribution</h2>
+    
+    <canvas id="investmentChart" width="200" height="200"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
