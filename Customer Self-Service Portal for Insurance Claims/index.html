@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insurance Customer Self-Service Portal</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@google-cloud/dialogflow@0.8.1"></script> <!-- Example Dialogflow Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@google-cloud/dialogflow@0.8.1"></script>
 </head>
 <body>
     <div class="container">
@@ -56,10 +56,13 @@
             </section>
 
             <!-- Chatbot Integration -->
-            <section id="chatbotSection" class="hidden">
-                <h2>Chat with Us (AI-Powered Chatbot)</h2>
-                <div id="chatbotContainer"></div>
-            </section>
+<section id="chatbotSection" class="hidden">
+    <h2>Chat with Us</h2>
+    <div id="chatbotContainer"></div>
+    <input type="text" id="userMessageInput" placeholder="Type your message here..." />
+    <button id="sendMessageBtn">Send</button>
+</section>
+
 
             <!-- Knowledge Base Search -->
             <section id="knowledgeBase">
